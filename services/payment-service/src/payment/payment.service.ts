@@ -71,10 +71,6 @@ export class PaymentService {
 
         return meetingId;
       }
-
-      return false;
     }
-
-    return false;
   }
 }

@@ -24,13 +24,7 @@ export class PaymentController {
   @MessagePattern({ cmd: 'handle_liqPay_webhook' })
   @Log()
   async handleLiqPayWebook(webhookData) {
-    let meetingId: string | boolean;
-
-    meetingId = await this.handleLiqPayWebook(webhookData);
-
-    if (!meetingId) {
-      return false;
-    }
+    await this.handleLiqPayWebook(webhookData);
 
     return true;
   }
